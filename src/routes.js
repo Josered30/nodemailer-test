@@ -8,6 +8,8 @@ router.route("/").post(async (req, res) => {
   const { email } = req.body;
   const transport = await getTransport();
   // send mail with defined transport object
+
+  console.log(process.env.HOST_MAIL);
   let info = await transport.sendMail({
     from: process.env.HOST_MAIL, // sender address
     to: email, // list of receivers
