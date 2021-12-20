@@ -11,7 +11,7 @@ app.use(cors());
 
 app.use(express.json());
 
-const routes = require("./routes");
-app.use("/api", routes);
+const routes = require("./routes/auth");
+app.use("/api/auth", routes);
 
 module.exports = app;
