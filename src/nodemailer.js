@@ -18,7 +18,7 @@ const getNodemailer = () => {
         port: 465,
         host: "mail.privateemail.com",
         auth: {
-          user: "contacto@just-talk.live", //replace with your email
+          user: process.env.HOST_MAIL, //replace with your email
           pass: "21051993aA#1", //replace with your password
         },
       });
