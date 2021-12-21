@@ -6,13 +6,22 @@ const getNodemailer = () => {
 
   const getTransport = () => {
     if (nodemailerTransport == null) {
-      nodemailerTransport = nodemailer.createTransport(
-        sendgridTransport({
-          auth: {
-            api_key: process.env.SENDGRID_APIKEY,
-          },
-        })
-      );
+      // nodemailerTransport = nodemailer.createTransport(
+      //   sendgridTransport({
+      //     auth: {
+      //       api_key: process.env.SENDGRID_APIKEY,
+      //     },
+      //   })
+      // );
+
+      nodemailerTransport = nodemailer.createTransport({
+        port: 465,
+        host: "mail.privateemail.com",
+        auth: {
+          user: "contacto@just-talk.live", //replace with your email
+          pass: "21051993aA#1", //replace with your password
+        },
+      });
     }
     return nodemailerTransport;
   };

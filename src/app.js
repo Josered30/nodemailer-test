@@ -15,3 +15,4 @@ const routes = require("./routes/auth");
 app.use("/api/auth", routes);
 
 module.exports = app;
+
