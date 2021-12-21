@@ -17,6 +17,7 @@ const getNodemailer = () => {
       nodemailerTransport = nodemailer.createTransport({
         port: 465,
         host: "mail.privateemail.com",
+        secure: true,
         auth: {
           user: process.env.HOST_MAIL, //replace with your email
           pass: "21051993aA#1", //replace with your password
